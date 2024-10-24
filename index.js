@@ -88,7 +88,8 @@ function contar(requisicao, resposta){
 
 }
 
-function multiplicar(requisicao, resposta){
+function calcular(requisicao, resposta){
+
         const sequencial = parseInt(requisicao.query.sequencial);
         const final = parseInt(requisicao.query.final);
     
@@ -114,7 +115,7 @@ function multiplicar(requisicao, resposta){
         }
     }
 
-app.get("/multiplicar", multiplicar);
+app.get("/multiplicar", calcular);
 
 app.listen(porta, host, () => {
     console.log("Servidor em execução http://" + host + ":" + porta);
